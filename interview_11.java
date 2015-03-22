@@ -4,6 +4,7 @@ public class interview_11{
 		interview_11 solution =  new interview_11();
 
 		System.out.println(solution.power(2,-12));
+		// System.out.println(solution.power2(2,-12));
 	}
 
 	public double power(double base,int exponent) throws Exception{
@@ -26,6 +27,21 @@ public class interview_11{
 
 		return res;
 	}
+
+	// public double power2(double base,int exponent){
+	// 	if(exponent == 0)
+	// 		return 1;
+	// 	if(exponent == 1)
+	// 		return base;
+
+	// 	double res = power2(base,exponent >> 1);
+	// 	res *= res;
+
+	// 	if(exponent%2 == 1)
+	// 		res *= base;
+
+	// 	return res;
+	// }
 
 	public int cmpDouble(double x,double y){
 		if(x - y < -ESP) return 1;
