@@ -9,8 +9,8 @@ public class interview_24_2{
 	public boolean solute(int[] datas,int start,int end){
 		if(datas == null) return false;
 		if(end < start) return false;
-		if(start == end) return true;
-
+		if(start == end) return true
+;
 		int root = datas[end];
 		
 		int i = start;
