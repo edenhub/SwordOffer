@@ -4,8 +4,39 @@ public class interview_30{
 		int[] lines = {4,5,1,6,2,7,3,8};
 
 		interview_30 solutioin = new interview_30();
-		solutioin.solute(lines,4);
+		solutioin.solute2(lines,4);
 	}
+
+	 public void solute2(int[] lines,int k){
+        PriorityQueue<Integer> heap = new PriorityQueue<Integer>(k,new Comparator<Integer>(){
+
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                if(o1 == o2) return 0;
+                else if(o1 > o2) return 1;
+                else return -1;
+            }
+        });
+
+        int len = lines.length;
+
+        for(int i=0;i<len;i++){
+            int size = heap.size();
+            int curr = lines[i];
+            if (size < k) heap.add(curr);
+            else{
+                int top = heap.peek();
+                if (curr >= top) continue;
+                else{
+                    heap.poll();
+                    heap.add(curr);
+                }
+            }
+        }
+        
+        for (int i=0;i<k;i++)
+            System.out.print(lines[i]+" ");
+    }
 
 	public void solute(int[] lines,int k){
 
