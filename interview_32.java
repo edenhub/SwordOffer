@@ -1,3 +1,4 @@
+//没写
 public class interview_32{
 
 	public static void main(String[] args){
